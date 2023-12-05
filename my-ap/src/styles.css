@@ -4,6 +4,7 @@ html {
 
 body {
     margin: 0;
+    margin-top: 6rem;
     padding: 0;
     font-family: "Poppins", sans-serif;
     background-color: #faf9f6;
@@ -19,6 +20,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh; /* Minimum height of the viewport */
 }
 
 nav, header, main, footer {
@@ -37,6 +39,14 @@ input, button, select, textarea {
 /* Nav section */
 .nav-container {
     justify-content: space-between;
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 6rem;
+    z-index: 1000; /* Ensure it's above other elements */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds shadow for depth */
+    background-color: #EDEFEE;
 }
 
 .nav-links {
@@ -346,11 +356,49 @@ footer {
     display: flex;
     gap: 2rem;
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 .order-item button {
     margin-left: 10px;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-icon {
+    display: flex;
+    align-items: center; /* Aligns children vertically in the center */
+}
+.cart-icon img {
+    width: 2rem; /* Adjust this value to increase the size of the icon */
+    height: auto; /* This maintains the aspect ratio of the icon */
+}
+
+.cart-count {
+    /* Other styles */
+    font-size: 1rem; /* Adjust the font size as needed */
+    margin-left: 5px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }

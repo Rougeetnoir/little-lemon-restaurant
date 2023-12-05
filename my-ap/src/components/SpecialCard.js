@@ -22,7 +22,7 @@ export default function SpecialCard({ image, name: dishName, price, description 
                     <h3>{price}</h3>
                 </div>
                 <p>{description}</p>
-                <button className="card-item-button" to="/order" onClick={handleAddToCart}>Add in Online Order Cart</button>
+                <button className="card-item-button" to="/order" onClick={handleAddToCart}>Add to bag</button>
             </div>
         </article>
     )

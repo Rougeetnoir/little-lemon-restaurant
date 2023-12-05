@@ -5,18 +5,26 @@ export const ShoppingCartContext = createContext();
 
 export const ShoppingCartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([]);
-
+    const [itemCount, setItemCount] = useState(0);
     const addToCart = (item) => {
         setCartItems([...cartItems, item]);
+        setItemCount(itemCount + 1);
     };
     const removeFromCart = (index) => {
         const newCartItems = cartItems.filter((_, itemIndex) => itemIndex !== index);
         setCartItems(newCartItems);
+        setItemCount(itemCount - 1);
+    };
+    const clearCart = () => {
+        setCartItems([]);
+        setItemCount(0); // Reset itemCount as well
     };
     const contextValue = {
         cartItems,
+        itemCount,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        clearCart
     };
 
     return (

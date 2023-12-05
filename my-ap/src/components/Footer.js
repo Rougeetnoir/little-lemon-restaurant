@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="footer-section contact">
                     <h3>Find Us:</h3>
                     <ul>
-                        <li>Chicago, IL</li>
+                        <li>1523 Amore Street, Chicago, IL 60610</li>
                         <li>Phone: (312) 555-0100</li>
                         <li>Email: info@littlelemon.com</li>
                     </ul>
