@@ -23,7 +23,7 @@ body {
     min-height: 100vh; /* Minimum height of the viewport */
 }
 
-nav, header, main, footer {
+nav, footer {
     width: 100%;
     display: flex;
     padding: 2% 10%; /* 2% padding for top and bottom, 10% for left and right */
@@ -64,10 +64,23 @@ input, button, select, textarea {
 }
 
 /* Header Section */
-header {
+
+.header-background {
+    width: 100%;
     background-color: #495e57;
+    /* Apply your background styles here, if any */
     align-items: center;
     position: relative;
+}
+
+.header-container {
+    margin: auto;
+    /* max-width: 1200px;  */
+    padding: 2% 10%; /* This aligns with the global padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 10%;
 }
 
 .header-content {
@@ -114,20 +127,27 @@ button:active, button:hover {
    padding: 0px;
 }
 
-main {
+/* Main Section */
+
+.main-container {
+    display: flex;
+    flex-grow: 1;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
+    width: 100%;
+
 }
-/* Main Section */
-.main-container {
+
+
+.highlights-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    padding: 2% 10%;
+
 }
-
-
-
 
 h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -210,14 +230,11 @@ label {
 
 /* Footer Section */
 
-footer {
-    background-color: #495e57;
-    color: #faf9f6;
-}
 
 .footer-container {
-    display: flex;
     flex-direction: column;
+    background-color: #495e57;
+    color: #faf9f6;
 }
 .footer-content {
     display: flex;
@@ -264,7 +281,7 @@ footer {
 }
 
 .special-card {
-    width: 28em;
+    width: 30%;
     background-color: #EDEFEE;
     border-radius: 13px;
     overflow: hidden; /* This will ensure the image conforms to the card's border */
@@ -306,9 +323,7 @@ footer {
 
 /* About section */
 .about-container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
+    padding: 2% 10%;
 }
 
 .about-section {
@@ -333,8 +348,8 @@ footer {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: #EDEFEE;
     color:#495e57;
+    margin-top: 10rem;
 }
 
 .order-container p {
@@ -375,7 +390,7 @@ footer {
 }
 .cart-icon img {
     width: 2rem; /* Adjust this value to increase the size of the icon */
-    height: auto; /* This maintains the aspect ratio of the icon */
+    height: auto; /* the aspect ratio of the icon */
 }
 
 .cart-count {

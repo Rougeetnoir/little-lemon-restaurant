@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from '../components/Header';
-import Main from '../components/Main';
+import Highlights from '../components/Highlights';
 import Specials from '../components/Specials';
 import dishesData from '../components/DishesData';
 function HomePage() {
     return (
         <>
             <Header />
-            <Main />
+            <Highlights />
             <Specials dishes={dishesData.slice(0, 3)} />
         </>
     );

@@ -17,10 +17,10 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Layout><HomePage /></Layout>} />
+          <Route path="/menu" element={<Layout><Specials dishes={dishesData} /></Layout>} />
           <Route path="/about" element={<Layout><AboutPage /></Layout>} />
           <Route path="/booking" element={<Layout><BookingPage /></Layout>} />
           <Route path="/booking-confirmed" element={<Layout><ConfirmedBooking /></Layout>} />
-          <Route path="/menu" element={<Layout><Specials dishes={dishesData} /></Layout>} />
           <Route path="/login" element={<Layout><LoginPage /></Layout>} />
           <Route path="/order" element={<Layout><Order /></Layout>} />
         </Routes>

@@ -17,7 +17,7 @@ const MainComponent = () => {
     };
 
     if (isAuthenticated) {
-        return <main><div>Welcome to Little Lemon Restaurant!</div></main>;
+        return <div>Welcome to Little Lemon Restaurant!</div>;
     }
 
     return <LoginForm onLogin={handleLogin} />;
