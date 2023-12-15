@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = ({ onLogin }) => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (event) => {
         event.preventDefault();
         onLogin(username, password);
+        navigate('/logged-in');
     };
+
+
 
     return (
         <main className='login-main'>

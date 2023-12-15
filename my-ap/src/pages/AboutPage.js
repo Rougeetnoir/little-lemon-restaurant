@@ -1,7 +1,13 @@
 import React from 'react';
 import Header from '../components/Header';
 import Main from '../components/Highlights';
-
+import ImageCarousel from '../components/ImageCarousel';
+const images = [
+    '/images/chef2.jpg',
+    '/images/chef1.jpg',
+    '/images/chef3.jpg',
+    '/images/chef4.jpg'
+];
 function AboutPage() {
     return (
         <>
@@ -24,6 +30,7 @@ function AboutPage() {
                     <p>What sets Little Lemon apart is not just the food, but the experience. Marco and Luca believe in creating a space where every visit feels like a celebration, a place where families and friends can gather to share moments and create memories. Their warm hospitality and attention to detail are evident in every corner of the restaurant, from the cozy, rustic décor to the open kitchen where guests can watch the magic happen. At Little Lemon, every meal is more than just a meal - it's an experience, a piece of Italy right in the heart of Chicago.</p>
                 </section>
             </div>
+            <ImageCarousel images={images} />
         </>
     );
 }

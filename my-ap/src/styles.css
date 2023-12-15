@@ -417,3 +417,67 @@ label {
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
+
+
+.carousel-container {
+    position: relative;
+    max-width: 600px; /* Adjust as needed */
+    margin: 3rem;
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    display: block; /* Remove extra space below the image */
+    border-radius: 8%;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    /* padding: 10px 20px; */
+}
+.carousel-button svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem; /* Increase the gap between dots */
+}
+
+.carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.carousel-dot.active {
+    background-color: #f4ce14;
+}
+
+/* Optional: Add transitions for smooth effect */
+.carousel-image {
+    transition: transform 0.5s ease;
+}
+
