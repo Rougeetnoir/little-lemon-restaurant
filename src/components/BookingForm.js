@@ -17,14 +17,7 @@ const BookingForm = ({ availableTimes, dispatchOnDateChange, submitData }) => {
         validateForm();
     }, [formData]);
 
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevState => ({ ...prevState, [name]: value }));
 
-        if (name === 'date') {
-            dispatchOnDateChange(value);
-        }
-    };
 
     const validateForm = () => {
         const errors = {};
@@ -33,6 +26,14 @@ const BookingForm = ({ availableTimes, dispatchOnDateChange, submitData }) => {
         if (formData.numberOfGuests < 1 || formData.numberOfGuests > 10) errors.numberOfGuests = 'Please enter a number between 1 and 10';
         if (!formData.occasion) errors.occasion = 'Please choose a valid occasion';
         setFormErrors(errors);
+    };
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({ ...prevState, [name]: value }));
+
+        if (name === 'date') {
+            dispatchOnDateChange(value);
+        }
     };
 
     const isFormValid = () => Object.keys(formErrors).length === 0;
@@ -57,7 +58,7 @@ const BookingForm = ({ availableTimes, dispatchOnDateChange, submitData }) => {
             <h1 className='form-title'>Book a Table</h1>
             <form className='booking-form' onSubmit={handleFormSubmit}>
                 <FormField label="Date" htmlFor="booking-date" errorMessage={formErrors.date}>
-                    <input type="date" id="booking-date" name="booking-date" min={minimumDate} value={formData.date} onChange={handleInputChange} />
+                    <input type="date" id="booking-date" name="date" min={minimumDate} value={formData.date} onChange={handleInputChange} />
                 </FormField>
 
                 <FormField label="Time" htmlFor="booking-time" errorMessage={formErrors.time}>

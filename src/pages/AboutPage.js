@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from '../components/Header';
-import Main from '../components/Highlights';
 import ImageCarousel from '../components/ImageCarousel';
 const images = [
     '/images/chef2.jpg',

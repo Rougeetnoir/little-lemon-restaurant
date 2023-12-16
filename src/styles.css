@@ -31,7 +31,7 @@ nav, footer {
 
 input, button, select, textarea {
     font-family: inherit;
-    height: 3rem; /* Set your desired height */
+    height: 3rem; 
     font-size: 1rem;
     color: #495e57;
 }
@@ -68,15 +68,12 @@ input, button, select, textarea {
 .header-background {
     width: 100%;
     background-color: #495e57;
-    /* Apply your background styles here, if any */
     align-items: center;
     position: relative;
 }
 
 .header-container {
     margin: auto;
-    /* max-width: 1200px;  */
-    padding: 2% 10%; /* This aligns with the global padding */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -481,3 +478,139 @@ label {
     transition: transform 0.5s ease;
 }
 
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    height: 3rem;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: #495e57;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    p, li, .footer-bottom{
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 0px;
+    }
+
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute; /* Position the menu items absolutely */
+        top: 100%; /* Position right below the nav bar */
+        left: 0;
+        right: 0;
+        background-color: #EDEFEE; /* Your desired background color */
+        z-index: 100; /* Ensure it appears above other content */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-items {
+        width: 100%; /* Make each item take full width */
+        padding: 1rem; /* Adjust padding as needed */
+        text-align: center; /* Center the text */
+        text-decoration: none;
+        border-bottom: 2px dotted rgba(255, 255, 255, 0.5); /* Optional: add a border between items */
+    }
+
+    .cart-icon {
+        display: block;
+    }
+
+    .nav-items:last-child {
+        border-bottom: none; /* Remove border for the last item */
+    }
+
+    .nav-items:hover {
+        background-color: #495e57;
+        color: #EDEFEE;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute; /* Position the hamburger icon */
+        top: 15px; /* Adjust as needed */
+        right: 15px; /* Adjust as needed */
+    }
+
+    .hamburger .bar {
+        background-color: #495e57; /* Color of hamburger icon bars */
+    }
+
+    .header-image{
+       display: none;
+    }
+
+    .header-content {
+        text-align: left;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .header-button {
+        padding: 10px 20px; /* Smaller padding */
+    }
+
+    .specials-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards horizontally */
+        gap: 2rem; /* Adjust gap between cards */
+    }
+
+    .special-card {
+        width: auto; /* Adjust the width to fit smaller screens */
+        margin-bottom: 1rem; /* Add some space between stacked cards */
+    }
+
+    .card-item-image {
+        height: 20vh; /* Adjust the height of the image */
+    }
+
+    .card-item-info {
+        margin: 1rem; /* Reduce margin inside the card */
+    }
+
+    .card-item-info h2, .card-item-info h3 {
+        font-size: 1.2rem; /* Reduce font size */
+    }
+
+    .card-item-info p {
+        font-size: 0.9rem; /* Reduce font size */
+        min-height: auto; /* Remove minimum height restriction */
+    }
+
+    .card-item-button {
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-content {
+        gap: 0rem;
+    }
+}

@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from 'react';
+import React, { useReducer } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
 import { fetchAPI, submitAPI } from '../components/utilities/MockApi';

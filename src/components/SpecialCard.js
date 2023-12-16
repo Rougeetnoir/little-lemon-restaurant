@@ -1,17 +1,14 @@
 import React, { useContext } from 'react';
 import { ShoppingCartContext } from './ShoppingCartContext';
-import { useNavigate } from 'react-router-dom';
 
 
 // destructuring the props in the SpecialCard component as shown:
 // To avoid the name conflict, we rename the name prop to dishName as it's destructured.
 export default function SpecialCard({ image, name: dishName, price, description }) {
     const { addToCart } = useContext(ShoppingCartContext);
-    const navigate = useNavigate();
 
     const handleAddToCart = () => {
         addToCart({ dishName, price, description });
-        // navigate('/order'); // Programmatically navigate to the order page
     };
     return (
         <article className="special-card">

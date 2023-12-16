@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import LoginForm from '../components/LoginForm';
 // import { loginUser } from '../api'; // Uncomment if you have an API call
-import { useNavigate } from 'react-router-dom';
 const MainComponent = () => {
 
 
